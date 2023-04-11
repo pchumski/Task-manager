@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Database1DataSet" targetNamespace="http://tempuri.org/Database1DataSet.xsd" xmlns:mstns="http://tempuri.org/Database1DataSet.xsd" xmlns="http://tempuri.org/Database1DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MenadżerZadań.Properties.Settings.GlobalReference.Default.Database1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TasksTableAdapter" GeneratorDataComponentClassName="TasksTableAdapter" Name="Tasks" UserDataComponentName="TasksTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.Tasks" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Tytul, Priorytet, Ukonczono FROM dbo.Tasks</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tytul" DataSetColumn="Tytul" />
+              <Mapping SourceColumn="Priorytet" DataSetColumn="Priorytet" />
+              <Mapping SourceColumn="Ukonczono" DataSetColumn="Ukonczono" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Database1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database1DataSet" msprop:Generator_UserDSName="Database1DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Tasks" msprop:Generator_TableClassName="TasksDataTable" msprop:Generator_TableVarName="tableTasks" msprop:Generator_TablePropName="Tasks" msprop:Generator_RowDeletingName="TasksRowDeleting" msprop:Generator_RowChangingName="TasksRowChanging" msprop:Generator_RowEvHandlerName="TasksRowChangeEventHandler" msprop:Generator_RowDeletedName="TasksRowDeleted" msprop:Generator_UserTableName="Tasks" msprop:Generator_RowChangedName="TasksRowChanged" msprop:Generator_RowEvArgName="TasksRowChangeEvent" msprop:Generator_RowClassName="TasksRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tytul" msprop:Generator_ColumnVarNameInTable="columnTytul" msprop:Generator_ColumnPropNameInRow="Tytul" msprop:Generator_ColumnPropNameInTable="TytulColumn" msprop:Generator_UserColumnName="Tytul">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Priorytet" msprop:Generator_ColumnVarNameInTable="columnPriorytet" msprop:Generator_ColumnPropNameInRow="Priorytet" msprop:Generator_ColumnPropNameInTable="PriorytetColumn" msprop:Generator_UserColumnName="Priorytet" type="xs:int" />
+              <xs:element name="Ukonczono" msprop:Generator_ColumnVarNameInTable="columnUkonczono" msprop:Generator_ColumnPropNameInRow="Ukonczono" msprop:Generator_ColumnPropNameInTable="UkonczonoColumn" msprop:Generator_UserColumnName="Ukonczono" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
